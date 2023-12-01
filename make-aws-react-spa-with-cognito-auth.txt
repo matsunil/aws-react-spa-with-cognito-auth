@@ -1,0 +1,38 @@
+
+Create bucket cdk-hnb659fds-assets-604773387822-us-east-1
+
+npm install
+
+cdk deploy --all --profile 604773387822_aws-coreinfra-admin
+
+Outputs:
+AuthStack.apiEndpoint9349E63C = https://5tm6cnmwi8.execute-api.us-east-1.amazonaws.com/api/
+Stack ARN:
+arn:aws:cloudformation:us-east-1:604773387822:stack/AuthStack/0b202750-9064-11ee-b21a-1278b2d97047
+CognitoUserPoolId	us-east-1_oq3f99aUu
+CognitoUserPoolWebClientId	60fd4lg797rabaj92dtv5kjpqc
+ExportsOutputFnGetAttUserPool6BA7E5F2Arn686ACC00	arn:aws:cognito-idp:us-east-1:604773387822:userpool/us-east-1_oq3f99aUu
+
+
+cd frontend/web 
+
+Update frontend/web/src/App.tsx to use the previous outputs.
+userPoolId
+userPoolWebClientId
+apiEndpoint
+
+npm install
+
+npm run build
+
+
+cd frontend/provisioning 
+
+npm i @aws-cdk/aws-ec2
+cdk deploy --all --profile 604773387822_aws-coreinfra-admin
+
+
+user1 / Genat63!
+
+
+
